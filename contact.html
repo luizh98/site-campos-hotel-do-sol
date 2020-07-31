@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="image/favicon.png" type="image/png">
+    <title>Campos Hotel do Sol</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!--================Header Area =================-->
+    <header class="header_area">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">O Hotel</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Galeria</a></li>
+                        <li class="nav-item submenu dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Acomodações</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="standard.html">Standard</a></li>
+                                <li class="nav-item"><a class="nav-link" href="confort.html">Confort</a></li>
+                                <li class="nav-item"><a class="nav-link" href="master.html">Master</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item active"><a class="nav-link" href="contact.html">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================Header Area =================-->
+
+    <!--================Breadcrumb Area =================-->
+    <section class="breadcrumb_area contact_banner">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">
+        </div>
+        <div class="container">
+            <div class="page-cover text-center">
+                <h2 class="page-cover-tittle f_48">Contato</h2>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="active">Contato</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <!--================Breadcrumb Area =================-->
+
+    <!--================Contact Area =================-->
+    <section class="contact_area section_gap">
+        <div class="container">
+            <!--<div id="mapBox" class="mapBox" data-lat="-22.717828" data-lon="-45.563474" data-zoom="13"
+                data-info="Capivari, Campos do Jordão - SP, 12460-000"
+                data-mlat="-22.717828" data-mlon="-45.563474">
+            </div>-->
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1840.139349200827!2d-45.56431441414659!3d-22.71788030450389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDQzJzA0LjIiUyA0NcKwMzMnNDguNSJX!5e0!3m2!1spt-BR!2sbr!4v1594864617650!5m2!1spt-BR!2sbr"
+                width="1130" height="420" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0">
+            </iframe>
+
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <div class="contact_info">
+                        <div class="info_item">
+                            <i class="lnr lnr-home"></i>
+                            <h6>Rua Marcondes Machado, 119, Vila Capivari</h6>
+                            <p>Campos do Jordão - SP</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-phone-handset"></i>
+                            <h6><a href="tel:+1236633330">(12) 3663-3330</a></h6>
+                            <h6><a href="tel:+1236636900">(12) 3663-6900</a></h6>
+                            <p>Atendimento 24 horas</p>
+                        </div>
+                        <div class="info_item">
+                            <i class="lnr lnr-envelope"></i>
+                            <h6><a href="#">camposhoteldosol@gmail.com</a></h6>
+                            <p>Faça sua reserva pelo nosso e-mail</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <form class="row contact_form" action="contact_process.php" method="post" id="contactForm"
+                        novalidate="novalidate">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" name="name"
+                                    placeholder="Digite seu nome">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Digite seu e-mail">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" name="subject"
+                                    placeholder="Digite o assunto">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" rows="1"
+                                    placeholder="Mensagem"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-right">
+                            <button type="submit" value="submit" class="btn theme_btn button_hover">Enviar
+                                Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Contact Area =================-->
+
+    <!--================ start footer Area  =================-->
+    <footer class="footer-area section_gap">
+        <div class="text-center">
+            <div class="social justify-content-center">
+                <a href="#" target="_blank" title="Em breve"><i class="fa fa-facebook"></i></a>
+                <a href="#" target="_blank" title="Em breve"><i class="fa fa-twitter"></i></a>
+                <a href="#" target="_blank" title="Em breve"><i class="fa fa-google-plus"></i></a>
+                <a href="https://www.instagram.com/camposhoteldosoloficial/" target="_blank" title="Instagram"><i
+                        class="fa fa-instagram"></i></a>
+            </div>
+            <div class="row justify-content-center text-white">
+                <strong class="p-1">Campos Hotel do Sol &copy;
+                    <script>document.write(new Date().getFullYear())</script></strong>
+                <a class="text-white p-1" href="index.html">Inicio</a>
+                <a class="text-white p-1" href="about.html">Hotel</a>
+                <a class="text-white p-1" href="contact.html">Contato</a>
+                <a class="text-white p-1" href="tel:+1236633330">(12) 3663-3330</a>
+                <a class="text-white p-1" href="tel:+1236636900">(12) 3663-6900</a>
+            </div>
+        </div>
+    </footer>
+    <!--================ End footer Area  =================-->
+
+
+    <!--================Contact Success and Error message Area =================-->
+    <div id="success" class="modal modal-message fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-close"></i>
+                    </button>
+                    <h2>Obrigado</h2>
+                    <p>Sua mensagem foi enviada com sucesso!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals error -->
+
+    <div id="error" class="modal modal-message fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-close"></i>
+                    </button>
+                    <h2>Desculpe!</h2>
+                    <p>Tente novamente mais tarde</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================End Contact Success and Error message Area =================-->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="vendors/nice-select/js/jquery.nice-select.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendors/isotope/isotope-min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+    <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="js/gmaps.min.js"></script>
+    <!-- contact js -->
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
