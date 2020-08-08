@@ -1289,6 +1289,7 @@ button:focus {
   overflow: hidden;
   border-radius: 10px;
   max-height: 300px;
+  text-align: center;
 }
 
 .accomodation_item .hotel_img img {
@@ -1305,7 +1306,7 @@ button:focus {
   -ms-transform: translate(-50%);
   transform: translate(-50%);
   padding: 5px 25px;
-  max-width: 128px;
+  max-width: 155px;
 }
 
 .accomodation_item .hotel_img:hover img {
