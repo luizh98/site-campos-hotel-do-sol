@@ -965,7 +965,6 @@ button:focus {
 
 .banner_area .bg-parallax {
   background: url("../image/banner_bg.jpg") no-repeat scroll center 0 / cover;
-  opacity: 0.5;
 }
 
 .banner_area .position {
@@ -995,6 +994,7 @@ button:focus {
 .banner_content {
   color: #fff;
   margin-bottom: 94px;
+  text-shadow: 2px 2px #000000;
 }
 
 .banner_content h6 {
