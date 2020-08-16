@@ -184,7 +184,7 @@
                         <a href="standard.html">
                             <h4 class="sec_h4">Suíte Standard</h4>
                         </a>
-                        <h5>$250<small>/noite</small></h5>
+                        <h5><small>A partir de </small>R$190,00<small>/noite</small></h5>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-12">
@@ -197,7 +197,7 @@
                         <a href="confort.html">
                             <h4 class="sec_h4">Suíte Confort</h4>
                         </a>
-                        <h5>$200<small>/noite</small></h5>
+                        <h5><small>A partir de </small>R$220,00<small>/noite</small></h5>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-12">
@@ -210,7 +210,7 @@
                         <a href="master.html">
                             <h4 class="sec_h4">Suíte Master</h4>
                         </a>
-                        <h5>$750<small>/noite</small></h5>
+                        <h5><small>A partir de </small>R$250,00<small>/noite</small></h5>
                     </div>
                 </div>
             </div>
@@ -314,15 +314,23 @@
             </div>
         </div>
     </section>
+    <div class="d-none d-sm-block" style="font-family: 'Poppins', sans-serif;">
+        <a href="#top"><br>Voltar ao topo</a>
+    </div>
+    <div class="d-block d-sm-none">
+        <a href="#top" class="fa fa-chevron-circle-up" style="font-size: 35px !important;"></a>
+    </div>
+
     <!--================ Recent Area  =================-->
 
     <!--================ start footer Area  =================-->
     <footer class="footer-area section_gap">
         <div class="text-center">
             <div class="social justify-content-center">
-                <a href="#" target="_blank" title="Em breve"><i class="fa fa-facebook"></i></a>
-                <a href="#" target="_blank" title="Em breve"><i class="fa fa-twitter"></i></a>
-                <a href="#" target="_blank" title="Em breve"><i class="fa fa-google-plus"></i></a>
+                <a href="https://www.facebook.com/camposhoteldosol" target="_blank" title="Em breve"><i
+                        class="fa fa-facebook"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5512982633330&text=Ol%C3%A1%2C%20boa%20tarde!%20Gostaria%20de%20fazer%20uma%20reserva."
+                    target="_blank" title="Em breve"><i class="fa fa-whatsapp"></i></a>
                 <a href="https://www.instagram.com/camposhoteldosoloficial/" target="_blank" title="Instagram"><i
                         class="fa fa-instagram"></i></a>
             </div>
@@ -376,6 +384,19 @@
             $(".carousel-caption").hide();
             $("img[alt=acomodacao").on("hover", function () {
                 $(".carousel-caption").fadeIn();
+            });
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 500) {
+                    $('a[href="#top"]').fadeIn();
+                } else {
+                    $('a[href="#top"]').fadeOut();
+                }
+            });
+
+            $('a[href="#top"]').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
             });
         });
     </script>

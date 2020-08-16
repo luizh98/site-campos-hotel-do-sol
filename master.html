@@ -63,10 +63,6 @@
         <div class="container">
             <div class="page-cover text-center">
                 <h2 class="page-cover-tittle f_48">Suíte Master</h2>
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li class="active">Master</li>
-                </ol>
             </div>
         </div>
     </section>
@@ -152,14 +148,19 @@
         </div>
     </section>
     <!--================ Testimonial Area  =================-->
+    <div class="d-none d-sm-block" style="font-family: 'Poppins', sans-serif;">
+        <a href="#top"><br>Voltar ao topo</a>
+    </div>
+    <div class="d-block d-sm-none">
+        <a href="#top" class="fa fa-chevron-circle-up" style="font-size: 35px !important;"></a>
+    </div>
 
     <!--================ start footer Area  =================-->
     <footer class="footer-area section_gap">
         <div class="text-center">
             <div class="social justify-content-center">
-                <a href="#" target="_blank" title="Em breve"><i class="fa fa-facebook"></i></a>
-                <a href="#" target="_blank" title="Em breve"><i class="fa fa-twitter"></i></a>
-                <a href="#" target="_blank" title="Em breve"><i class="fa fa-google-plus"></i></a>
+                <a href="https://www.facebook.com/camposhoteldosol" target="_blank" title="Em breve"><i class="fa fa-facebook"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5512982633330&text=Ol%C3%A1%2C%20boa%20tarde!%20Gostaria%20de%20fazer%20uma%20reserva." target="_blank" title="Em breve"><i class="fa fa-whatsapp"></i></a>
                 <a href="https://www.instagram.com/camposhoteldosoloficial/" target="_blank" title="Instagram"><i
                         class="fa fa-instagram"></i></a>
             </div>
@@ -206,6 +207,22 @@
     <script src="js/stellar.js"></script>
     <script src="vendors/lightbox/simpleLightbox.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 350) {
+                    $('a[href="#top"]').fadeIn();
+                } else {
+                    $('a[href="#top"]').fadeOut();
+                }
+            });
+
+            $('a[href="#top"]').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>
