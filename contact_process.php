@@ -1,35 +1,78 @@
 <?php
-    $to = "dev.lhdsantos@gmail.com";
-    $from = $_REQUEST['email'];
+	// Inclui o arquivo class.phpmailer.php localizado na mesma pasta do arquivo php 
+	include "PHPMailer/PHPMailerAutoload.php"; 
+
+	// Inicia a classe PHPMailer 
+	$mail = new PHPMailer(); 
+
+	// Método de envio 
+	$mail->IsSMTP(); 
+
+	// Enviar por SMTP 
+	$mail->Host = "smtp.gmail.com"; 
+	// Você pode alterar este parametro para o endereço de SMTP do seu provedor 
+	$mail->Port = 587; 	
+	// Usar autenticação SMTP (obrigatório) 
+	$mail->SMTPAuth = true; 
+
+	// Usuário do servidor SMTP (endereço de email) 
+	// obs: Use a mesma senha da sua conta de email 
+	$mail->Username = 'emailhotel@gmail.com'; 
+	$mail->Password = 'senha_email'; 
+
+	// Configurações de compatibilidade para autenticação em TLS 
+	$mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) ); 
+
+	// Você pode habilitar esta opção caso tenha problemas. Assim pode identificar mensagens de erro. 
+	// $mail->SMTPDebug = 2; 
+
+	// Define o remetente
+	// Seu e-mail 
+	$mail->From = "emailhotel@gmail.com"; 
+	// Seu nome 
+	$mail->FromName = "Campos Hotel do Sol - Contato"; 
+
+	$from = $_REQUEST['email'];
     $name = $_REQUEST['name'];
     $subject = $_REQUEST['subject'];
 	$message = $_REQUEST['message'];
 
-    $headers = "From: $from";
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: ". $from . "\r\n";
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+	// Define o(s) destinatário(s) 
+	$mail->AddAddress($from, $name); 
 
-	$subject = "You have a message from your Cake Template.";
+	// Opcional: mais de um destinatário
+	// $mail->AddAddress('fernando@email.com'); 
 
-    $logo = '';
-    $link = '#';
+	// Opcionais: CC e BCC
+	// $mail->AddCC('joana@provedor.com', 'Joana'); 
+	// $mail->AddBCC('roberto@gmail.com', 'Roberto'); 
 
-	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
-	$body .= "<table style='width: 100%;'>";
-	$body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
-	$body .= "<a href='{$link}'></a><br><br>";
-	$body .= "</td></tr></thead><tbody><tr>";
-	$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
-	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
-	$body .= "</tr>";
-	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$subject}</td></tr>";
-	$body .= "<tr><td></td></tr>";
-	$body .= "<tr><td colspan='2' style='border:none;'>{$message}</td></tr>";
-	$body .= "</tbody></table>";
-	$body .= "</body></html>";
+	// Definir se o e-mail é em formato HTML ou texto plano 
+	// Formato HTML . Use "false" para enviar em formato texto simples ou "true" para HTML.
+	$mail->IsHTML(true); 
 
-    $send = mail($to, $subject, $body, $headers);
+	// Charset (opcional) 
+	$mail->CharSet = 'UTF-8'; 
+
+	// Assunto da mensagem 
+	$mail->Subject =  $subject; 
+
+	// Corpo do email 
+	$mail->Body = $message; 
+
+	// Opcional: Anexos 
+	// $mail->AddAttachment("/home/usuario/public_html/documento.pdf", "documento.pdf"); 
+
+	// Envia o e-mail 
+	$enviado = $mail->Send(); 
+
+	// Exibe uma mensagem de resultado 
+	if ($enviado) 
+	{ 
+		//echo "Seu <a href="https://www.homehost.com.br/blog/tutoriais/email-marketing/como-usar-o-email-marketing-para-enviar-newsletters/" >email foi enviado</a> com sucesso!"; 
+	} else { 
+		echo "Houve um erro enviando o email: ".$mail->ErrorInfo; 
+	} 
+
 
 ?>
