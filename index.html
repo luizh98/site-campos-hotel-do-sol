@@ -81,7 +81,8 @@
                                     <div class="book_tabel_item">
                                         <div class="form-group">
                                             <div class='input-group date' id='datetimepicker11'>
-                                                <input type='text' class="form-control" placeholder="Check-in" />
+                                                <input type='text' class="form-control" placeholder="Check-in"
+                                                    id="dataCheckin" />
                                                 <span class="input-group-addon">
                                                     <i class="fa fa-calendar" aria-hidden="true"></i>
                                                 </span>
@@ -89,7 +90,8 @@
                                         </div>
                                         <div class="form-group">
                                             <div class='input-group date' id='datetimepicker1'>
-                                                <input type='text' class="form-control" placeholder="Check-out" />
+                                                <input type='text' class="form-control" placeholder="Check-out"
+                                                    id="dataCheckout" />
                                                 <span class="input-group-addon">
                                                     <i class="fa fa-calendar" aria-hidden="true"></i>
                                                 </span>
@@ -133,7 +135,8 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="book_tabel_item mt-4">
-                                        <a class="book_now_btn button_hover" href="#">Reservar agora</a>
+                                        <a class="book_now_btn button_hover" href="#"
+                                            onclick="reservarAgora();">Reservar agora</a>
                                     </div>
                                 </div>
                             </div>
@@ -380,6 +383,14 @@
     <script src="js/custom.js"></script>
 
     <script>
+
+        function reservarAgora() {
+            var dataCheckin = document.getElementById("dataCheckin").value;
+            var dataCheckout = document.getElementById("dataCheckout").value;
+
+            window.location.href = "https://camposhoteldosol.bukly.com/pt-br/hotel/" + dataCheckin.substring(0, 10) + "/" + dataCheckout.substring(0, 10) + "/";
+        }
+
         $(document).ready(function () {
             $(".carousel-caption").hide();
             $("img[alt=acomodacao").on("hover", function () {
